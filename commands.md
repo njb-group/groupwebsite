@@ -29,11 +29,12 @@ $ git commit // this file commits the changes made to files.
 (-a) // commits all files added using git and all changed
 after the fact.
 
-**connect a remote repository**
+**connect/remove a remote repository**
 
 $ git remote add origin <server>// connects local repository
 to remote server repository.
 $ git remote -v // lists all currently configured repositories.
+$ git remote rm origin // this command removes the current repo path.
 
 **push**
 
