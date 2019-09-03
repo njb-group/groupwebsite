@@ -1,120 +1,125 @@
-/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
-
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
+/*#####################
+HEADER SECTION STYLES
+#####################*/
 
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+/* header at the top of the page */
+.header {
+  background-color: #FFFFFF;
+  height: 50px;
+  position: relative;
+  width: 100%;
+  z-index: 1500;
 }
 
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+/* title at the top of the page - only visible on small screen sizes */
+.title {
+  background-color: inherit;
+  color: #0D3D56;
+  font-size: 1.35em;
+  line-height: 50px;
+  position: absolute;
+  text-align: center;
+  text-transform: capitalize;
+  top: 0;
+  width: inherit;
+  z-index: 2500;
 }
 
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+/* hamburger menu in the top right corner - only visible on small screen sizes */
+.hamburger-menu {
+  cursor: pointer;
+  display: block;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  z-index: 2500;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
+/* universal style for all the lines in the menu */
+.hamburger-menu div {
+  background-color: #0D3D56;
+  display: block;
+  height: 3px;
+  margin: 0 25%;
+  position: absolute;
+  transition: all 0.4s;
+  width: 29px;
 }
 
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+/* positioning for each line */
+.line1 {
+  top: 13px;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
+.line2 {
+  top: 23px;
 }
 
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
-
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+.line3 {
+  top: 33px;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-html{
-  width:90%;
-  margin:auto;
-  min-width:600px;
-  max-width:2000px
-}
-/* I have including the font face function for future use
- */
-@font-face {
-    font-family: '';
-    src: url();
-    font-style: normal;
-    font-weight: 100;
+/* style for the first line in the hamburger menu when active  */
+.active .line1 {
+  top: -13px;
 }
 
-body{
-  font-family: '';
-  font-weight: 100;
+/* style for the second line in the hamburger menu when active  */
+.active .line2 {
+  transform: rotate(45deg);
 }
+
+/* style for the third line in the hamburger menu when active  */
+.active .line3 {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* nav - slide in list on small screen sizes */
+.nav {
+  background-color: #0D3D56;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  transition: top 0.7s;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* nav to move across to be visible when the hamburger menu is active */
+.active .nav {
+  top: 50px;
+}
+
+/* styling the list in the nav */
+.nav ul {
+  margin: 0 1em;
+  text-align: left;
+  list-style: none;
+  position: relative;
+}
+
+/* styling the list items in the nav */
+.nav ul li {
+  color: #EEEEEE;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 1em 0;
+  padding: 0 0.5em;
+  text-transform: uppercase;
+}
+
+/*##################
+PROJECTS SECTION
+##################*/
+
 .projects-section{
   color: #0A1774;
   width: 100%;
@@ -160,205 +165,38 @@ p{
   text-align: center;
 }
 
-/* scrollbar tag used to alter and customise
- * the look and size of the scrollbar
- */
-::-webkit-scrollbar {
-  width: 10px;
-}
+/*#####################
+STYLES FOR DESKTOP SCREEN SIZES (WIDTH: 1024px)
+#####################*/
+@media only screen and (min-width: 1024px) {
+  /* hamburger disappears - becomes redundant */
+  .hamburger-menu {
+    display: none;
+  }
 
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 3px #000028;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb{
-  background: #322FD4;
-  border-radius: 10px;
-
-}
-
-::-webkit-scrollbar-thumb:hover{
-  background: #000028;
-}
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden {
-    display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap; /* 1 */
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
+  /* nav no longer slides in and remains at the top permanently */
+  .nav {
+    background-color: transparent;
     position: static;
+  }
+
+  /* restyling the list in the nav to be positioned in a row */
+  .nav ul {
+    background-color: inherit;
+    justify-content: center;
+    float: right;
+    margin: 0;
+    margin-right: 1em;
+    text-align: center;
     width: auto;
-    white-space: inherit;
-}
+    z-index: 3000;
+  }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster */
-        -webkit-box-shadow: none !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+  /* styling the list items */
+  .nav ul li {
+    color: #0D3D56;
+    font-size: 1em;
+    line-height: 50px;
+    margin: 0 0.125em;
+  }
 }
