@@ -121,12 +121,12 @@ PROJECTS SECTION
 ##################*/
 
 .projects-section{
-  color: #0A1774;
+  color: #0D3D56;
   width: 100%;
   padding: 0;
   margin: 0;
-  border-top: 2px solid #0A1774;
-  border-bottom: 2px solid #0A1774;
+  border-top: 2px solid #0D3D56;
+  border-bottom: 2px solid #0D3D56;
 }
 
 .projects-heading{
@@ -137,22 +137,26 @@ PROJECTS SECTION
   text-decoration: underline;
   text-align: center;
 }
+.p-group{
+  text-align: center;
+  margin: auto;
+
+}
 
 .projects{
   display: inline-block;
   margin: 10px;
   padding: 2px;
-  border: 2px solid #0A1774;
+  border: 2px solid #0D3D56;
   width: 30%;
-  height: 30%;
+  height: 300px;
   word-wrap: break-word;
   border-radius: 10px;
-  overflow-y: auto;
+  overflow: auto;
 }
 
 .project-images{
   width: 90%;
-  height: 30%;
   display: block;
   margin: auto;
 }
