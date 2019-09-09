@@ -165,9 +165,7 @@ h3{
   text-align: center;
 }
 
-p{
-  text-align: center;
-}
+
 
 /*#####################
 STYLES FOR DESKTOP SCREEN SIZES (WIDTH: 1024px)
@@ -203,4 +201,14 @@ STYLES FOR DESKTOP SCREEN SIZES (WIDTH: 1024px)
     line-height: 50px;
     margin: 0 0.125em;
   }
+}
+
+/*#####################
+STYLES FOR COMING SOON PAGE
+#####################*/
+
+.card-deck {
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 150px;
 }
