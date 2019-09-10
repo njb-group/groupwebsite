@@ -120,7 +120,7 @@ HEADER SECTION STYLES
 PROJECTS SECTION
 ##################*/
 
-.projects-section{
+.section{
   color: #0D3D56;
   width: 100%;
   padding: 0;
@@ -129,7 +129,7 @@ PROJECTS SECTION
   border-bottom: 2px solid #0D3D56;
 }
 
-.projects-heading{
+.section-headings{
   width: 100%;
   font-weight: bold;
   margin: 10px;
@@ -137,19 +137,14 @@ PROJECTS SECTION
   text-decoration: underline;
   text-align: center;
 }
-.p-group{
-  text-align: center;
-  margin: auto;
 
-}
-
-.projects{
+.information-boxes{
   display: inline-block;
   margin: 10px;
   padding: 2px;
   border: 2px solid #0D3D56;
   width: 30%;
-  height: 300px;
+  height: 30%;
   word-wrap: break-word;
   border-radius: 10px;
   overflow: auto;
