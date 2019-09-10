@@ -117,16 +117,26 @@ HEADER SECTION STYLES
 }
 
 /*##################
-PROJECTS SECTION
+SERVICES & PROJECTS SECTION
 ##################*/
 
-.section{
-  color: #0D3D56;
+.services{
+  color: #FFFFFF;
+  background-color: #0D3D56;
   width: 100%;
   padding: 0;
   margin: 0;
   border-top: 2px solid #0D3D56;
   border-bottom: 2px solid #0D3D56;
+
+}
+.projects{
+  color: #0D3D56;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
 }
 
 .section-headings{
@@ -138,13 +148,28 @@ PROJECTS SECTION
   text-align: center;
 }
 
+.flexbox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+@media (max-width: 800px){
+  .flexbox{
+    flex-direction: column;
+  }
+
+}
 .information-boxes{
   display: inline-block;
   margin: 10px;
   padding: 2px;
-  border: 2px solid #0D3D56;
+  border: 2px solid;
   width: 30%;
   height: 30%;
+  text-align: center;
   word-wrap: break-word;
   border-radius: 10px;
   overflow: auto;
