@@ -3,7 +3,10 @@
   margin: 0;
   padding: 0;
 }
-
+body{
+  background-image: url(tile-wide.png);
+  background-attachment: fixed;
+}
 /*#####################
 HEADER SECTION STYLES
 #####################*/
@@ -115,7 +118,22 @@ HEADER SECTION STYLES
   padding: 0 0.5em;
   text-transform: uppercase;
 }
-
+/*######################
+INTRODUCTION SECTION
+######################*/
+.introduction{
+  color: #FFFFFF;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-top: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+  text-align: center;
+}
+.this-is-us{
+padding: 5px;
+margin: 5px;
+}
 /*##################
 SERVICES & PROJECTS SECTION
 ##################*/
@@ -131,7 +149,7 @@ SERVICES & PROJECTS SECTION
 
 }
 .projects{
-  color: #0D3D56;
+  color: #FFFFFF;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -184,9 +202,32 @@ SERVICES & PROJECTS SECTION
 h3{
   text-align: center;
 }
-
-
-
+/*##########
+CONTACT US
+##########*/
+.contact{
+  background-color: #0D3D56;
+  color:  #FFFFFF;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-top: 2px solid #0D3D56;
+  border-bottom: 2px solid #0D3D56;
+}
+.contact-form{
+  text-align: center;
+}
+.message-box{
+  width: 50%;
+  height: 10em;
+}
+/*#########
+FOOTER
+#########*/
+footer{
+  width: 100%;
+  height: 4em;
+}
 /*#####################
 STYLES FOR DESKTOP SCREEN SIZES (WIDTH: 1024px)
 #####################*/
